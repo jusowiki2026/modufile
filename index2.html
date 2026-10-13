@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹하드 & P2P 사이트 순위 리얼 비교 가이드</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <!-- 상단 네비게이션 -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <span class="bg-blue-600 text-white text-xs font-bold px-3 py-1.5 rounded tracking-wide">REAL RANK</span>
+                <span class="text-sm font-semibold text-gray-700">웹하드·P2P 팩트체크</span>
+            </div>
+
+            <!-- 데스크탑 메뉴 -->
+            <nav class="hidden md:flex space-x-8 text-sm font-medium text-gray-700">
+                <a href="#rank" class="hover:text-blue-600">웹하드순위</a>
+                <a href="#p2p" class="hover:text-blue-600">P2P사이트순위</a>
+                <a href="#new" class="hover:text-blue-600">신생사이트</a>
+                <a href="#guide" class="hover:text-blue-600">이용꿀팁</a>
+                <a href="#principles" class="hover:text-blue-600">운영원칙</a>
+            </nav>
+
+            <!-- 햄버거 버튼 -->
+            <button id="menu-btn" class="md:hidden p-1.5 rounded-lg hover:bg-gray-100 focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6 text-gray-700"></i>
+            </button>
+        </div>
+
+        <!-- 모바일 드롭다운 메뉴 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 py-3 space-y-2 text-sm font-medium text-gray-700 shadow-lg">
+            <a href="#rank" class="block py-1.5 hover:text-blue-600">웹하드순위</a>
+            <a href="#p2p" class="block py-1.5 hover:text-blue-600">P2P사이트순위</a>
+            <a href="#new" class="block py-1.5 hover:text-blue-600">신생사이트</a>
+            <a href="#guide" class="block py-1.5 hover:text-blue-600">이용꿀팁</a>
+            <a href="#principles" class="block py-1.5 hover:text-blue-600">운영원칙</a>
+        </div>
+    </header>
+
+    <!-- 메인 블루 배너 -->
+    <section class="bg-blue-600 text-white py-10 md:py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                
+                <div class="lg:col-span-5 space-y-3">
+                    <div>
+                        <p class="text-xs text-blue-200 font-bold">광고 거르고 직접 써본 솔직 후기</p>
+                        <h1 class="text-2xl md:text-3xl font-extrabold tracking-tight mt-0.5">속터지는 웹하드·P2P, <br>어디가 쓸만할까?</h1>
+                        <p class="text-xs text-blue-100 mt-1">속도, 자료량, 제휴 콘텐츠 압박 없는 진짜 쓸만한 곳들만 골라봤습니다.</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-3 pt-2 border-t border-blue-500/50 text-xs gap-2">
+                        <div>
+                            <p class="text-blue-200">업데이트 주기</p>
+                            <p class="font-bold mt-0.5 text-white">매월 실시간 검증</p>
+                        </div>
+                        <div>
+                            <p class="text-blue-200">기준 포인트</p>
+                            <p class="font-bold mt-0.5 text-white">가입 즉시 사용 가능</p>
+                        </div>
+                        <div>
+                            <p class="text-blue-200">선정 기준</p>
+                            <p class="font-bold mt-0.5 text-white">속도·자료·숨은비용</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 bg-white text-gray-800 rounded-2xl shadow-md p-6 border border-gray-100">
+                    <div class="grid grid-cols-2 sm:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-gray-100 text-center gap-y-4 sm:gap-y-0">
+                        <div class="flex flex-col items-center justify-center space-y-1">
+                            <i data-lucide="hard-drive" class="w-4 h-4 text-blue-600 mb-0.5"></i>
+                            <span class="text-xs text-gray-500 font-medium">비교 사이트</span>
+                            <span class="text-2xl font-bold text-gray-900 tracking-tight">15개</span>
+                        </div>
+                        <div class="flex flex-col items-center justify-center space-y-1">
+                            <i data-lucide="users" class="w-4 h-4 text-blue-600 mb-0.5"></i>
+                            <span class="text-xs text-gray-500 font-medium">오늘 방문자</span>
+                            <span class="text-2xl font-bold text-gray-900 tracking-tight">420</span>
+                        </div>
+                        <div class="flex flex-col items-center justify-center space-y-1">
+                            <i data-lucide="check-circle" class="w-4 h-4 text-blue-600 mb-0.5"></i>
+                            <span class="text-xs text-gray-500 font-medium">어제 방문자</span>
+                            <span class="text-2xl font-bold text-gray-900 tracking-tight">380</span>
+                        </div>
+                        <div class="flex flex-col items-center justify-center space-y-1">
+                            <i data-lucide="trending-up" class="w-4 h-4 text-blue-600 mb-0.5"></i>
+                            <span class="text-xs text-gray-500 font-medium">누적 방문자</span>
+                            <span class="text-2xl font-bold text-gray-900 tracking-tight">9,250</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 본문 컨테이너 -->
+    <main class="max-w-6xl mx-auto px-4 py-8 space-y-12">
+
+        <!-- 1. 웹하드 사이트 순위 -->
+        <div id="rank" class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 space-y-6">
+            
+            <div class="flex flex-col md:flex-row md:items-center justify-between border-b border-gray-100 pb-4 gap-2">
+                <div>
+                    <h2 class="text-lg font-bold text-gray-900">웹하드 & P2P 실사용 인기 순위 TOP 5</h2>
+                    <p class="text-xs text-gray-500 mt-0.5">속도, 자료 검색 편의성, 회원 만족도 종합 기준</p>
+                </div>
+                <div class="text-xs text-gray-400">
+                    * 사이트명 앞의 아이콘(로고) 이미지 및 변동 표시를 확인하세요.
+                </div>
+            </div>
+
+            <!-- 모바일 전용 카드형 뷰 -->
+            <div class="md:hidden space-y-3">
+                <div class="p-4 rounded-xl border border-gray-100 bg-white space-y-3 shadow-xs">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center space-x-2.5">
+                            <span class="font-bold text-blue-600 text-sm">1</span>
+                            <span class="text-[10px] text-green-600 font-bold bg-green-50 px-1.5 py-0.5 rounded">▲ 3</span>
+                            <img src="https://placehold.co/24x24/eee/999?text=Logo" alt="싸다파일 로고" class="w-6 h-6 rounded object-cover">
+                            <span class="font-bold text-gray-900 text-sm">싸다파일</span>
+                            <span class="bg-blue-50 text-blue-600 text-[10px] px-1.5 py-0.5 rounded font-bold">추천</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-600">최신 영화 및 방송 자료 업로드 속도가 가장 빠르고 버퍼링이 적음.</p>
+                    <div class="text-right">
+                        <a href="#" class="inline-flex items-center text-xs bg-blue-600 text-white px-3 py-1.5 rounded font-semibold">사이트 접속 <i data-lucide="chevron-right" class="w-3 h-3 ml-1"></i></a>
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-xl border border-gray-100 bg-white space-y-3 shadow-xs">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center space-x-2.5">
+                            <span class="font-bold text-gray-700 text-sm">2</span>
+                            <span class="text-[10px] text-green-600 font-bold bg-green-50 px-1.5 py-0.5 rounded">▲ 1</span>
+                            <img src="https://placehold.co/24x24/eee/999?text=Logo" alt="예스파일 로고" class="w-6 h-6 rounded object-cover">
+                            <span class="font-bold text-gray-900 text-sm">예스파일</span>
+                            <span class="bg-gray-100 text-gray-600 text-[10px] px-1.5 py-0.5 rounded">인기</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-600">다양한 제휴 이벤트와 보너스 포인트 지급으로 가성비가 뛰어남.</p>
+                    <div class="text-right">
+                        <a href="#" class="inline-flex items-center text-xs bg-blue-600 text-white px-3 py-1.5 rounded font-semibold">사이트 접속 <i data-lucide="chevron-right" class="w-3 h-3 ml-1"></i></a>
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-xl border border-gray-100 bg-white space-y-3 shadow-xs">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center space-x-2.5">
+                            <span class="font-bold text-gray-700 text-sm">3</span>
+                            <span class="text-[10px] text-gray-400 font-bold bg-gray-100 px-1.5 py-0.5 rounded">- 유지</span>
+                            <img src="https://placehold.co/24x24/eee/999?text=Logo" alt="투디스크 로고" class="w-6 h-6 rounded object-cover">
+                            <span class="font-bold text-gray-900 text-sm">투디스크</span>
+                            <span class="bg-gray-100 text-gray-600 text-[10px] px-1.5 py-0.5 rounded">안정</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-600">오래된 업력만큼 고화질 자료와 마니아층 자료가 잘 정리되어 있음.</p>
+                    <div class="text-right">
+                        <a href="#" class="inline-flex items-center text-xs bg-blue-600 text-white px-3 py-1.5 rounded font-semibold">사이트 접속 <i data-lucide="chevron-right" class="w-3 h-3 ml-1"></i></a>
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-xl border border-gray-100 bg-white space-y-3 shadow-xs">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center space-x-2.5">
+                            <span class="font-bold text-gray-700 text-sm">4</span>
+                            <span class="text-[10px] text-red-500 font-bold bg-red-50 px-1.5 py-0.5 rounded">▼ 2</span>
+                            <img src="https://placehold.co/24x24/eee/999?text=Logo" alt="위디스크 로고" class="w-6 h-6 rounded object-cover">
+                            <span class="font-bold text-gray-900 text-sm">위디스크</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-600">광고가 적고 인터페이스가 깔끔하여 모바일 환경에서 이용하기 편리함.</p>
+                    <div class="text-right">
+                        <a href="#" class="inline-flex items-center text-xs bg-blue-600 text-white px-3 py-1.5 rounded font-semibold">사이트 접속 <i data-lucide="chevron-right" class="w-3 h-3 ml-1"></i></a>
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-xl border border-gray-100 bg-white space-y-3 shadow-xs">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center space-x-2.5">
+                            <span class="font-bold text-gray-700 text-sm">5</span>
+                            <span class="text-[10px] text-green-600 font-bold bg-green-50 px-1.5 py-0.5 rounded">▲ 1</span>
+                            <img src="https://placehold.co/24x24/eee/999?text=Logo" alt="파일스타 로고" class="w-6 h-6 rounded object-cover">
+                            <span class="font-bold text-gray-900 text-sm">파일스타</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-600">꾸준한 이벤트와 다운로드 속도 제한 없는 안정적인 서버 제공.</p>
+                    <div class="text-right">
+                        <a href="#" class="inline-flex items-center text-xs bg-blue-600 text-white px-3 py-1.5 rounded font-semibold">사이트 접속 <i data-lucide="chevron-right" class="w-3 h-3 ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PC 전용 테이블 뷰 -->
+            <div class="hidden md:block overflow-x-auto">
+                <table class="w-full text-left text-sm text-gray-600">
+                    <tbody class="divide-y divide-gray-100 text-xs">
+                        <tr class="bg-white hover:bg-gray-50 transition-colors">
+                            <td class="py-4 px-4 w-16"><div class="font-extrabold text-blue-600 text-sm">1위</div></td>
+                            <td class="py-4 px-4 w-60">
+                                <div class="flex items-center space-x-2.5">
+                                    <span class="text-[10px] text-green-600 font-bold bg-green-50 px-1.5 py-0.5 rounded">▲ 3</span>
+                                    <img src="https://placehold.co/24x24/eee/999?text=Logo" alt="싸다파일 로고" class="w-6 h-6 rounded object-cover flex-shrink-0">
+                                    <a href="#" class="font-bold text-gray-900 hover:text-blue-600 flex items-center space-x-1">
+                                        <span>싸다파일</span>
+                                        <i data-lucide="external-link" class="w-3 h-3 text-gray-400"></i>
+                                    </a>
+                                    <span class="bg-blue-50 text-blue-600 text-[10px] px-1.5 py-0.5 rounded font-bold">추천</span>
+                                </div>
+                            </td>
+                            <td class="py-4 px-4 text-gray-600">최신 영화 및 방송 자료 업로드 속도가 가장 빠르고 버퍼링이 적음.</td>
+                            <td class="py-4 px-4 text-right w-32">
+                                <a href="#" class="inline-flex items-center justify-between bg-blue-600 hover:bg-blue-700 text-white font-semibold px-3.5 py-1.5 rounded text-xs shadow-sm w-24">
+                                    <span>바로가기</span>
+                                    <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                                </a>
+                            </td>
+                        </tr>
+
+                        <tr class="bg-gray-50/70 hover:bg-gray-100/70 transition-colors">
+                            <td class="py-4 px-4 w-16"><div class="font-extrabold text-gray-700 text-sm">2위</div></td>
+                            <td class="py-4 px-4 w-60">
+                                <div class="flex items-center space-x-2.5">
+                                    <span class="text-[10px] text-green-600 font-bold bg-green-50 px-1.5 py-0.5 rounded">▲ 1</span>
+                                    <img src="https://placehold.co/24x24/eee/999?text=Logo" alt="예스파일 로고" class="w-6 h-6 rounded object-cover flex-shrink-0">
+                                    <a href="#" class="font-bold text-gray-900 hover:text-blue-600 flex items-center space-x-1">
+                                        <span>예스파일</span>
+                                        <i data-lucide="external-link" class="w-3 h-3 text-gray-400"></i>
+                                    </a>
+                                    <span class="bg-gray-200 text-gray-600 text-[10px] px-1.5 py-0.5 rounded">인기</span>
+                                </div>
+                            </td>
+                            <td class="py-4 px-4 text-gray-600">다양한 제휴 이벤트와 보너스 포인트 지급으로 가성비가 뛰어남.</td>
+                            <td class="py-4 px-4 text-right w-32">
+                                <a href="#" class="inline-flex items-center justify-between bg-blue-600 hover:bg-blue-700 text-white font-semibold px-3.5 py-1.5 rounded text-xs shadow-sm w-24">
+                                    <span>바로가기</span>
+                                    <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                                </a>
+                            </td>
+                        </tr>
+
+                        <tr class="bg-white hover:bg-gray-50 transition-colors">
+                            <td class="py-4 px-4 w-16"><div class="font-extrabold text-gray-700 text-sm">3위</div></td>
+                            <td class="py-4 px-4 w-60">
+                                <div class="flex items-center space-x-2.5">
+                                    <span class="text-[10px] text-gray-400 font-bold bg-gray-100 px-1.5 py-0.5 rounded">- 유지</span>
+                                    <img src="https://placehold.co/24x24/eee/999?text=Logo" alt="투디스크 로고" class="w-6 h-6 rounded object-cover flex-shrink-0">
+                                    <a href="#" class="font-bold text-gray-900 hover:text-blue-600 flex items-center space-x-1">
+                                        <span>투디스크</span>
+                                        <i data-lucide="external-link" class="w-3 h-3 text-gray-400"></i>
+                                    </a>
+                                    <span class="bg-gray-100 text-gray-600 text-[10px] px-1.5 py-0.5 rounded">안정</span>
+                                </div>
+                            </td>
+                            <td class="py-4 px-4 text-gray-600">오래된 업력만큼 고화질 자료와 마니아층 자료가 잘 정리되어 있음.</td>
+                            <td class="py-4 px-4 text-right w-32">
+                                <a href="#" class="inline-flex items-center justify-between bg-blue-600 hover:bg-blue-700 text-white font-semibold px-3.5 py-1.5 rounded text-xs shadow-sm w-24">
+                                    <span>바로가기</span>
+                                    <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                                </a>
+                            </td>
+                        </tr>
+
+                        <tr class="bg-gray-50/70 hover:bg-gray-100/70 transition-colors">
+                            <td class="py-4 px-4 w-16"><div class="font-extrabold text-gray-700 text-sm">4위</div></td>
+                            <td class="py-4 px-4 w-60">
+                                <div class="flex items-center space-x-2.5">
+                                    <span class="text-[10px] text-red-500 font-bold bg-red-50 px-1.5 py-0.5 rounded">▼ 2</span>
+                                    <img src="https://placehold.co/24x24/eee/999?text=Logo" alt="위디스크 로고" class="w-6 h-6 rounded object-cover flex-shrink-0">
+                                    <a href="#" class="font-bold text-gray-900 hover:text-blue-600 flex items-center space-x-1">
+                                        <span>위디스크</span>
+                                        <i data-lucide="external-link" class="w-3 h-3 text-gray-400"></i>
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="py-4 px-4 text-gray-600">광고가 적고 인터페이스가 깔끔하여 모바일 환경에서 이용하기 편리함.</td>
+                            <td class="py-4 px-4 text-right w-32">
+                                <a href="#" class="inline-flex items-center justify-between bg-blue-600 hover:bg-blue-700 text-white font-semibold px-3.5 py-1.5 rounded text-xs shadow-sm w-24">
+                                    <span>바로가기</span>
+                                    <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                                </a>
+                            </td>
+                        </tr>
+
+                        <tr class="bg-white hover:bg-gray-50 transition-colors">
+                            <td class="py-4 px-4 w-16"><div class="font-extrabold text-gray-700 text-sm">5위</div></td>
+                            <td class="py-4 px-4 w-60">
+                                <div class="flex items-center space-x-2.5">
+                                    <span class="text-[10px] text-green-600 font-bold bg-green-50 px-1.5 py-0.5 rounded">▲ 1</span>
+                                    <img src="https://placehold.co/24x24/eee/999?text=Logo" alt="파일스타 로고" class="w-6 h-6 rounded object-cover flex-shrink-0">
+                                    <a href="#" class="font-bold text-gray-900 hover:text-blue-600 flex items-center space-x-1">
+                                        <span>파일스타</span>
+                                        <i data-lucide="external-link" class="w-3 h-3 text-gray-400"></i>
+                                    </a>
+                                </div>
+                            </td>
+                            <td class="py-4 px-4 text-gray-600">꾸준한 이벤트와 다운로드 속도 제한 없는 안정적인 서버 제공.</td>
+                            <td class="py-4 px-4 text-right w-32">
+                                <a href="#" class="inline-flex items-center justify-between bg-blue-600 hover:bg-blue-700 text-white font-semibold px-3.5 py-1.5 rounded text-xs shadow-sm w-24">
+                                    <span>바로가기</span>
+                                    <i data-lucide="chevron-right" class="w-3 h-3"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 2. 사이트 운영원칙 섹션 -->
+        <div id="principles" class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 md:p-8 space-y-6">
+            <div class="space-y-2">
+                <div class="inline-block bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded shadow-sm">
+                    SITE PRINCIPLES
+                </div>
+                <h2 class="text-xl md:text-2xl font-extrabold text-gray-900">
+                    웹하드 팩트체크 플랫폼 운영원칙 5가지
+                </h2>
+                <p class="text-xs text-gray-500">
+                    본 비교 가이드는 광고성 허위 정보를 배제하고 엄격한 실무 검증 기준에 따라 운영됩니다.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-4 pt-2">
+                <div class="flex items-start space-x-4 bg-gray-50/70 border border-gray-200/80 rounded-xl p-4">
+                    <span class="flex-shrink-0 w-7 h-7 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold text-xs">1</span>
+                    <div class="space-y-1">
+                        <h4 class="font-bold text-gray-900 text-sm">실사용자 검증 및 객관성 유지</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">금전적 대가나 일방적인 광고 협찬으로 순위를 조작하지 않으며, 실제 유저들의 다운로드 속도 및 서버 안정성 피드백을 토대로 객관적인 순위를 산정합니다.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4 bg-gray-50/70 border border-gray-200/80 rounded-xl p-4">
+                    <span class="flex-shrink-0 w-7 h-7 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold text-xs">2</span>
+                    <div class="space-y-1">
+                        <h4 class="font-bold text-gray-900 text-sm">실시간 정보수정 및 투명성 보장</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">제휴 정책 변경, 포인트 혜택 변동, 도메인 주소 변경 등 각 사이트의 변동 사항을 신속하게 모니터링하여 정보수정 요청 시 즉각 반영합니다.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4 bg-gray-50/70 border border-gray-200/80 rounded-xl p-4">
+                    <span class="flex-shrink-0 w-7 h-7 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold text-xs">3</span>
+                    <div class="space-y-1">
+                        <h4 class="font-bold text-gray-900 text-sm">개인정보 보호 및 스팸 방지 철저</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">사용자에게 과도한 마케팅 수신 동의를 유도하지 않으며, 제휴 및 이용 안내 과정에서 수집되는 정보는 관련 법령에 따라 철저하게 보호하고 관리합니다.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4 bg-gray-50/70 border border-gray-200/80 rounded-xl p-4">
+                    <span class="flex-shrink-0 w-7 h-7 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold text-xs">4</span>
+                    <div class="space-y-1">
+                        <h4 class="font-bold text-gray-900 text-sm">클린 제휴 및 건전한 이용 환경 조성</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">저작권 침해 우려가 큰 불법 위장 사이트나 먹튀 위험이 있는 부실 업체를 엄격히 필터링하여, 이용자들이 안전하게 이용할 수 있는 환경을 안내합니다.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4 bg-gray-50/70 border border-gray-200/80 rounded-xl p-4">
+                    <span class="flex-shrink-0 w-7 h-7 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold text-xs">5</span>
+                    <div class="space-y-1">
+                        <h4 class="font-bold text-gray-900 text-sm">이용자 소통 및 제휴 안내 채널 상시 운영</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">웹하드 운영사 및 일반 유저들의 피드백을 적극 수용하기 위해 상시 소통 창구를 열어두고, 제휴 및 정보수정 제안을 투명하게 처리합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. 리얼 가이드 & 체크포인트 -->
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 md:p-8 space-y-8">
+            <div class="space-y-4">
+                <div class="inline-block bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded shadow-sm">
+                    웹하드 고인물의 꿀팁
+                </div>
+                <h2 class="text-xl md:text-2xl font-extrabold text-gray-900">
+                    광고에 속지 말고, 딱 이 4가지만 확인하고 가입하세요
+                </h2>
+                <div class="text-sm text-gray-600 space-y-3 leading-relaxed">
+                    <p>인터넷에 떠도는 수많은 웹하드 순위 광고들, 막상 들어가 보면 포인트는 쥐꼬리만큼 주고 자동결제 늪에 빠지기 십상입니다. 웹하드나 P2P 사이트를 고를 때는 화려한 배너 문구보다 <strong>실제 다운로드 속도, 포인트 사용의 제약 여부, 자동결제 해지의 편의성</strong>을 따져봐야 합니다.</p>
+                </div>
+            </div>
+
+            <hr class="border-gray-100">
+
+            <div class="space-y-4">
+                <h3 class="text-lg font-bold text-gray-900">사이트 고를 때 꼭 따져봐야 할 4가지 기준</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="bg-gray-50/50 border border-gray-200/80 rounded-xl p-5 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="bg-blue-600 text-white text-xs font-bold px-2 py-0.5 rounded">01</span>
+                            <i data-lucide="zap" class="w-4 h-4 text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-base">다운로드 속도</h4>
+                            <p class="text-xs text-gray-600 mt-1.5 leading-relaxed">무료 회원에게 속도 제한(속도 락)을 얼마나 걸어두는지 확인합니다.</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50/50 border border-gray-200/80 rounded-xl p-5 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="bg-blue-600 text-white text-xs font-bold px-2 py-0.5 rounded">02</span>
+                            <i data-lucide="database" class="w-4 h-4 text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-base">자료 보유량</h4>
+                            <p class="text-xs text-gray-600 mt-1.5 leading-relaxed">최신 콘텐츠나 지난 방송, 영화가 제휴라는 이름으로 막혀있는지 체크합니다.</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50/50 border border-gray-200/80 rounded-xl p-5 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="bg-blue-600 text-white text-xs font-bold px-2 py-0.5 rounded">03</span>
+                            <i data-lucide="gift" class="w-4 h-4 text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-base">쿠폰 및 포인트</h4>
+                            <p class="text-xs text-gray-600 mt-1.5 leading-relaxed">가입 쿠폰이 대용량 파일을 받을 만큼 넉넉한지 살펴봅니다.</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50/50 border border-gray-200/80 rounded-xl p-5 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="bg-blue-600 text-white text-xs font-bold px-2 py-0.5 rounded">04</span>
+                            <i data-lucide="shield-alert" class="w-4 h-4 text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-base">결제 및 해지 안전성</h4>
+                            <p class="text-xs text-gray-600 mt-1.5 leading-relaxed">정액제 가입 후 해지 버튼을 숨겨놓지 않았는지 확인합니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. 체크리스트 (총 8개) -->
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 md:p-8 space-y-6">
+            <div class="space-y-4">
+                <div class="inline-flex items-center space-x-1.5 bg-blue-50 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-md">
+                    <span>이용 전 체크</span>
+                </div>
+                <h3 class="text-xl font-extrabold text-gray-900">웹하드 이용 시 피해야 할 호구 탈출 체크리스트 (총 8가지)</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div class="flex items-center space-x-3 bg-gray-50/60 border border-gray-200/70 rounded-xl p-4 text-xs md:text-sm text-gray-700">
+                        <span class="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-xs">✓</span>
+                        <span>무료 포인트 준다며 무심코 간편결제 등록부터 유도하는 곳은 거릅니다.</span>
+                    </div>
+                    <div class="flex items-center space-x-3 bg-gray-50/60 border border-gray-200/70 rounded-xl p-4 text-xs md:text-sm text-gray-700">
+                        <span class="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-xs">✓</span>
+                        <span>체험 이벤트 참여 후 자동 정기결제로 전환되는지 반드시 확인하세요.</span>
+                    </div>
+                    <div class="flex items-center space-x-3 bg-gray-50/60 border border-gray-200/70 rounded-xl p-4 text-xs md:text-sm text-gray-700">
+                        <span class="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-xs">✓</span>
+                        <span>보너스 포인트가 '제휴 콘텐츠'에는 사용 불가인지 꼭 체크해야 합니다.</span>
+                    </div>
+                    <div class="flex items-center space-x-3 bg-gray-50/60 border border-gray-200/70 rounded-xl p-4 text-xs md:text-sm text-gray-700">
+                        <span class="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-xs">✓</span>
+                        <span>다운로드 전용 프로그램 설치 시 불필요한 애드웨어 체크를 해제하세요.</span>
+                    </div>
+                    <div class="flex items-center space-x-3 bg-gray-50/60 border border-gray-200/70 rounded-xl p-4 text-xs md:text-sm text-gray-700">
+                        <span class="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-xs">✓</span>
+                        <span>출처를 알 수 없는 블로그의 허위 다운로드 링크나 악성코드 위장 사이트를 주의하세요.</span>
+                    </div>
+                    <div class="flex items-center space-x-3 bg-gray-50/60 border border-gray-200/70 rounded-xl p-4 text-xs md:text-sm text-gray-700">
+                        <span class="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-xs">✓</span>
+                        <span>상시 진행되는 이벤트 기간이 지났는데도 상시 혜택인 것처럼 포장된 곳을 경계하세요.</span>
+                    </div>
+                    <div class="flex items-center space-x-3 bg-gray-50/60 border border-gray-200/70 rounded-xl p-4 text-xs md:text-sm text-gray-700">
+                        <span class="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-xs">✓</span>
+                        <span>고객센터 전화번호나 1:1 문의 응답률이 턱없이 부실한 사이트는 이용을 피하세요.</span>
+                    </div>
+                    <div class="flex items-center space-x-3 bg-gray-50/60 border border-gray-200/70 rounded-xl p-4 text-xs md:text-sm text-gray-700">
+                        <span class="flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-xs">✓</span>
+                        <span>소멸 예정인 마일리지나 보너스 포인트를 핑계로 무리한 충전을 유도하는지 확인합니다.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. 이용자 후기 카드 4개 (FAQ 바로 직전 배치) -->
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 md:p-8 space-y-6">
+            <div class="space-y-2">
+                <div class="inline-flex items-center space-x-1.5 bg-blue-50 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-md">
+                    <span>REAL REVIEWS</span>
+                </div>
+                <h3 class="text-xl font-extrabold text-gray-900">실제 이용자들의 생생한 후기</h3>
+                <p class="text-xs text-gray-500">직접 사이트를 이용해 본 회원들이 남긴 솔직한 경험담입니다.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- 후기 카드 1 -->
+                <div class="bg-gray-50/70 border border-gray-200/80 rounded-xl p-5 space-y-3 flex flex-col justify-between">
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-gray-900 text-sm">김*민 님</span>
+                            <span class="text-yellow-500 text-xs font-bold">★ 5.0</span>
+                        </div>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            "속도 제한 때문에 답답했는데 여기 순위 보고 갈아타니까 속시원하게 다운되네요. 쿠폰도 쏠쏠합니다."
+                        </p>
+                    </div>
+                    <span class="text-[10px] text-blue-600 font-semibold bg-blue-50 px-2 py-0.5 rounded w-fit">싸다파일 이용자</span>
+                </div>
+
+                <!-- 후기 카드 2 -->
+                <div class="bg-gray-50/70 border border-gray-200/80 rounded-xl p-5 space-y-3 flex flex-col justify-between">
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-gray-900 text-sm">이*수 님</span>
+                            <span class="text-yellow-500 text-xs font-bold">★ 4.8</span>
+                        </div>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            "광고만 많고 정작 자료는 없는 곳들 많았는데, 여기 정리된 곳들은 확실히 알짜배기 자료가 많아요."
+                        </p>
+                    </div>
+                    <span class="text-[10px] text-blue-600 font-semibold bg-blue-50 px-2 py-0.5 rounded w-fit">예스파일 이용자</span>
+                </div>
+
+                <!-- 후기 카드 3 -->
+                <div class="bg-gray-50/70 border border-gray-200/80 rounded-xl p-5 space-y-3 flex flex-col justify-between">
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-gray-900 text-sm">박*준 님</span>
+                            <span class="text-yellow-500 text-xs font-bold">★ 4.9</span>
+                        </div>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            "모바일로 실시간 스트리밍 볼 때 끊김 없는 곳 찾고 있었는데 완벽합니다. 가이드대로 호구 탈출했어요."
+                        </p>
+                    </div>
+                    <span class="text-[10px] text-blue-600 font-semibold bg-blue-50 px-2 py-0.5 rounded w-fit">투디스크 이용자</span>
+                </div>
+
+                <!-- 후기 카드 4 -->
+                <div class="bg-gray-50/70 border border-gray-200/80 rounded-xl p-5 space-y-3 flex flex-col justify-between">
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="font-bold text-gray-900 text-sm">정*우 님</span>
+                            <span class="text-yellow-500 text-xs font-bold">★ 5.0</span>
+                        </div>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            "정기결제 해지 방법이랑 주의사항이 상세하게 나와 있어서 결제할 때 엄청 도움 됐습니다."
+                        </p>
+                    </div>
+                    <span class="text-[10px] text-blue-600 font-semibold bg-blue-50 px-2 py-0.5 rounded w-fit">파일스타 이용자</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. FAQ (10개) -->
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 md:p-8 space-y-6">
+            <div class="space-y-4">
+                <div class="inline-flex items-center space-x-1.5 bg-blue-50 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-md">
+                    <span>REAL FAQ (10개)</span>
+                </div>
+                <h3 class="text-xl font-extrabold text-gray-900">웹하드·P2P 이용자들이 가장 많이 묻는 질문 10가지</h3>
+                <div class="space-y-3">
+                    <div class="bg-gray-50/60 border border-gray-200/70 rounded-xl p-5 space-y-2">
+                        <h4 class="font-bold text-gray-900 text-sm md:text-base">Q1. 무료 쿠폰으로 영화나 방송을 완전히 공짜로 볼 수 있나요?</h4>
+                        <p class="text-xs md:text-sm text-gray-600 leading-relaxed">대부분 지급되는 쿠폰 포인트로 일반 자료는 충분히 받을 수 있습니다. 제휴 콘텐츠는 별도 포인트가 필요할 수 있습니다.</p>
+                    </div>
+                    <div class="bg-gray-50/60 border border-gray-200/70 rounded-xl p-5 space-y-2">
+                        <h4 class="font-bold text-gray-900 text-sm md:text-base">Q2. 다운로드 속도가 갑자기 느려졌는데 이유가 뭔가요?</h4>
+                        <p class="text-xs md:text-sm text-gray-600 leading-relaxed">무료 회원의 경우 서버 부하를 줄이기 위해 일시적으로 속도 제한을 거는 경우가 많습니다.</p>
+                    </div>
+                    <div class="bg-gray-50/60 border border-gray-200/70 rounded-xl p-5 space-y-2">
+                        <h4 class="font-bold text-gray-900 text-sm md:text-base">Q3. 정기결제 해지는 어떻게 하나요? 숨겨져 있다는 말이 있던데요?</h4>
+                        <p class="text-xs md:text-sm text-gray-600 leading-relaxed">마이페이지 구석이나 결제 관리 메뉴에 있으며, 찾기 어려울 땐 고객센터로 요청하는 것이 빠릅니다.</p>
+                    </div>
+                    <div class="bg-gray-50/60 border border-gray-200/70 rounded-xl p-5 space-y-2">
+                        <h4 class="font-bold text-gray-900 text-sm md:text-base">Q4. 모바일 스마트폰에서도 웹하드 파일을 바로 재생할 수 있나요?</h4>
+                        <p class="text-xs md:text-sm text-gray-600 leading-relaxed">네, 전용 앱을 통해 다운로드와 동시에 실시간 스트리밍 감상이 가능합니다.</p>
+                    </div>
+                    <div class="bg-gray-50/60 border border-gray-200/70 rounded-xl p-5 space-y-2">
+                        <h4 class="font-bold text-gray-900 text-sm md:text-base">Q5. 가입할 때 입력한 휴대폰 번호로 스팸 문자가 오지 않나요?</h4>
+                        <p class="text-xs md:text-sm text-gray-600 leading-relaxed">마케팅 수신 동의에 체크했는지 확인하시고, 가급적 필수 약관만 동의하시는 것을 권장합니다.</p>
+                    </div>
+                    <div class="bg-gray-50/60 border border-gray-200/70 rounded-xl p-5 space-y-2">
+                        <h4 class="font-bold text-gray-900 text-sm md:text-base">Q6. 신생 웹하드나 P2P 사이트가 혜택이 많은데 안전한가요?</h4>
+                        <p class="text-xs md:text-sm text-gray-600 leading-relaxed">신생 사이트는 갑자기 문을 닫는 경우가 있으므로 업력이 오래된 검증된 곳을 추천합니다.</p>
+                    </div>
+                    <div class="bg-gray-50/60 border border-gray-200/70 rounded-xl p-5 space-y-2">
+                        <h4 class="font-bold text-gray-900 text-sm md:text-base">Q7. 다운로드 프로그램(전용 설치 파일)을 꼭 깔아야 하나요?</h4>
+                        <p class="text-xs md:text-sm text-gray-600 leading-relaxed">대용량 파일 전송과 이어받기 기능을 위해 공식 인증된 전용 다운로더 설치를 권장합니다.</p>
+                    </div>
+                    <div class="bg-gray-50/60 border border-gray-200/70 rounded-xl p-5 space-y-2">
+                        <h4 class="font-bold text-gray-900 text-sm md:text-base">Q8. 포인트나 정액제 이용권 환불은 받을 수 있나요?</h4>
+                        <p class="text-xs md:text-sm text-gray-600 leading-relaxed">전혀 사용하지 않은 상태에서 7일 이내에는 청약철회가 가능하나, 이미 다운로드한 경우 제한됩니다.</p>
+                    </div>
+                    <div class="bg-gray-50/60 border border-gray-200/70 rounded-xl p-5 space-y-2">
+                        <h4 class="font-bold text-gray-900 text-sm md:text-base">Q9. 검색할 때 원하는 자료가 잘 안 나오는데 검색 팁이 있나요?</h4>
+                        <p class="text-xs md:text-sm text-gray-600 leading-relaxed">저작권 필터링으로 인해 초성이나 주요 키워드(배우 이름 등)로 검색하시면 쉽게 찾을 수 있습니다.</p>
+                    </div>
+                    <div class="bg-gray-50/60 border border-gray-200/70 rounded-xl p-5 space-y-2">
+                        <h4 class="font-bold text-gray-900 text-sm md:text-base">Q10. 소개된 순위와 사이트들은 주기적으로 바뀌나요?</h4>
+                        <p class="text-xs md:text-sm text-gray-600 leading-relaxed">네, 이용자 피드백과 정책 변화를 모니터링하여 매월 실시간으로 업데이트하고 있습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="bg-gray-800 text-gray-400 text-xs py-8 mt-12 border-t border-gray-700">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center space-x-2">
+                <span class="font-bold text-gray-200 text-sm">WEBHD REAL RANK</span>
+            </div>
+            <p>Copyright &copy; 2026 웹하드 팩트체크. All rights reserved.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#" class="hover:text-white">정보수정</a>
+                <a href="#" class="hover:text-white">제휴문의</a>
+                <a href="#" class="hover:text-white">이용약관</a>
+                <a href="#" class="hover:text-white font-bold text-gray-200">개인정보처리방침</a>
+                <a href="#" class="hover:text-white">고객센터</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 자바스크립트 -->
+    <script>
+        lucide.createIcons();
+
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
